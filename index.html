@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="style.css">
+	<title>COP4813: Internet Programming</title>
+</head>
+<body>
+		
+	<table align="center">
+		<tr><td>
+			<h1 style="text-align:center;">ePortfolio for COP 4813: Internet Programming</h1>
+		</td></tr>
+		<tr><td>
+			<h2 style="text-align:center; font-family:courier;">Travis Jones</h2>
+		</td></tr>
+		<tr><td>
+		<hr>
+	</td></tr>
+	<tr>
+			<th><h2 style="text-align:left;"><a href="assign1/index.html">Assignment 1</a></h2></th>
+		</tr>
+		<tr>
+			<td><p>
+				In this assignment, I created an index to be used for all future assignments in this course, along with an "About Me" page. Doing this taught me some of the basics of HTML and CSS, including the use of an external style sheet. 
+				<br><br>
+		
+				External style sheets seem to have the potential to make HTML programming much more efficient. In the future, I will try to use external style sheets as much as possible. I also learned that with CSS, max-width and min-width (possibly with height:width) can effectively scale html elements based on the number of pixels available.
+			</p></td>
+		</tr>
+		<tr>
+			<td><h3>Objectives:</h3>
+			<ul>
+				<li>Learn basic HTML</li>
+				<li>Learn basic CSS</li>
+				<li>Learn how to use an external style sheet</li>
+				<li>Learn how to use the course web server</li>
+			</ul></td>
+		</tr>	
+		<tr><td>
+			<hr>
+		</td></tr>
+		
+			<th><h2 style="text-align:left;"><a href="assign2/index.html">Assignment 2</a></h2></th>
+		</tr>
+		<tr><td><p><a href="assign2/flowchart.png">Flow chart</a></p></td></tr>
+		<tr>
+			<td><p>
+				Assignment 2 used JavaScript functions to calculate the monthly payment (or savings) necessary to pay off debt (or save a certain amount) in a given number of months. User input from text fields, radio boxes, drop down menus, and check boxes were all available on a form. The check box data, however, was not used in any calculations.
+				<br><br>
+		
+				JavaScript enabled me to create a very rudimentary program that runs inside of a web browser. Based on my experience with this assignment, it's clear that the capabilities of JavaScript can go far beyond what I have used so far.
+			</p></td>
+		</tr>
+		<tr>
+			<td><h3>Objectives:</h3>
+			<ul>
+				<li>Learn to make HTML forms</li>
+				<li>Learn how to validate user input</li>
+				<li>Learn to use JavaScript to make calulations with form data</li>
+		</tr>	
+		<tr><td>
+			<hr>
+		</td></tr>
+		
+		<tr>
+				<th><h2 style="text-align:left;"><a href="assign3/index.html">Assignment 3</a></h2></th>
+			</tr>
+			<tr><td><p><a href="assign3/tests.html">Unit Testing Results</a></p></td></tr>
+			<tr>
+				<td><p>
+					This assignment is a calculator that finds the count, sum, mean, median, mode, variance and standard deviation for a list of numbers. It creates an array from that list and then calls other functions to calculate statistics.
+					<br><br>
+		
+					By passing those statistical values back to subsequent functions, I was able to simplify my code. Standard deviation is the square root of variance, for instance, and both involve the count and sum.
+				</p></td>
+			</tr>
+			<tr>
+				<td><h3>Objectives:</h3>
+				<ul>
+					<li>Learn to create an array from a user provided list of numbers</li>
+					<li>Learn to use the output of functions in other functions</li>
+					<li>Understand how to do basic unit testing</li>
+					<li>Get a basic idea of how JavaScript libraries can be used</li>
+				</ul></td>
+			</tr>	
+			<tr><td>
+				<hr>
+			</td></tr>
+		
+			<tr>
+					<th><h2 style="text-align:left;"><a href="assign4/index.html">Assignment 4</a></h2></th>
+				</tr>
+
+					<td><p>
+						Assignment 4 is an animation of US employment by sector (Industry, Services, and Agriculture) from 1991 to 2015. A different chart cycles in every 2 seconds to illustrate change over time.
+						<br><br>
+		
+						For the chart animations, I used the Google Charts library. This simplified some things, but also required different syntax and data structures than I am used to. Additionally, I ran into an issue where the Google Charts library wasn't loading early enough for my chart to display unless the page was refreshed. The google.charts.setOnLoadCallback(function) function resolved this issue by preventing the functions requiring Google Charts from being called until after the Charts API is loaded.
+					</p></td>
+				</tr>
+				<tr>
+					<td><h3>Objectives:</h3>
+					<ul>
+						<li>Learn to use animation to illustrate an idea</li>
+						<li>Use libraries to simplify code</li>
+						<li>Get a basic idea of how animations can be coded</li>
+					</ul></td>
+				</tr>	
+				<tr><td>
+					<hr>
+				</td></tr>
+				
+					<th><h2 style="text-align:left;"><a href="assign5/index.php">Assignment 5</a></h2></th>
+				</tr>
+
+					<td><p>
+						This assignment is a contact list manager. I used PHP to read and modify data in a text file that stores contact information. For logging in, credentials are compared to text in a credentials file.
+						<br><br>
+		
+Form data is all submitted using POST after being sanitized. 
+					</p></td>
+				</tr>
+				<tr>
+					<td><h3>Objectives:</h3>
+					<ul>
+						<li>Use PHP to modify and read data</li>
+						<li>Sanitize form inputs</li>
+						<li>Create a basic login page</li>
+					</ul></td>
+				</tr>	
+				<tr><td>
+					<hr>
+				</td></tr>
+				
+					<th><h2 style="text-align:left;"><a href="assign6/index.php">Assignment 6</a></h2></th>
+				</tr>
+				<tr><td><p><a href="assign6/erd.png">Entity Relationship Diagram</a></p></td></tr>
+					<td><p>
+						Assignment 6 is a modifiable table of CPUs. Information is pulled from a mySQL database through PDO. User inputs to the database are only executed from prepared statements.
+						<br><br>
+One thing that stood out to me, again: moving between HTML, PHP and Javascript adds complexity to webpages, but ultimately is a more powerful way to program. I wasn't able to access PHP error logging in this assignment, adding to that complexity. I think PHP error logging may have the potential to greatly accelerate future work in PHP.
+					</p></td>
+				</tr>
+				<tr>
+					<td><h3>Objectives:</h3>
+					<ul>
+						<li>Retrieve information from a mySQL database</li>
+						<li>Modify or add information to that database</li>
+						<li>Sanitize user inputs before executing as SQL statements</li>
+						<li>Debug errors across PHP, HTML, and Javascript</li>
+						<li>Create a clean, intuitive interface</li>
+					</ul></td>
+				</tr>	
+				<tr><td>
+					<hr>
+				</td></tr>
+				
+									<th><h2 style="text-align:left;"><a href="assign7/index.php">Assignment 7</a></h2></th>
+								</tr>
+									<td><p>
+										Assignment 7 adds a text search box to Assignment 6. As text is entered, the CPU table is filtered based on terms or values. 
+										<br><br>
+				Underlying that is an html form that runs a Javascript function as input is typed with the onkeyup attribute. That function sends input to a PHP script with an XMLHttpRequest object. In PHP I used prepared statements with PDO, again. My SQL queries use the LOCATE function to find rows containing user input as substrings. Once the Javascript function gets a response from the server, the response text is then used to hide or reveal rows in the CPU table. 
+									</p></td>
+								</tr>
+								<tr>
+									<td><h3>Objectives:</h3>
+									<ul>
+										<li>Filter assignment 6 table using AJAX and PHP</li>
+										<li>Sanitize user inputs</li>
+										<li>Keep formatting consistent</li>
+									</ul></td>
+								</tr>	
+								<tr><td>
+									<hr>
+								</td></tr>
+	</table>
+		
+</body>
+</html>

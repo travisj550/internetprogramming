@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../style.css">
+	<title>Stats Calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="Statistics.js"></script>
+</head>
+<body>
+	<table class="fadeIn" id="stats" align="center" style="table-layout:fixed;">
+		<tr><td colspan=2><h1 style="text-align:center;">Statistics Calculator</h1></td></tr>
+		<tr><td colspan=2><p style="text-align:left;">Type a list of numbers in the box below to the left, separated by non-numeric characters (such as commas). Statistics from those numbers will appear to the right.</p></td></tr>
+	<tr><td><form id="mainForm" align="center">
+		<textarea id="input" class="fadeIn" name="data" style="height:230px; width:95%;"></textarea>
+		<br>
+		
+		<input id="submit" type="button" value="Submit" onclick="createArray();">
+		
+	</form></td>
+		
+	<td id="results" style="padding-left:10px; vertical-align:top;"><p id="mean">Mean: </p>
+	<p id="med">Median: </p>
+	<p id="n">Count: </p>
+	<p id="s">Summation: </p>
+	<p id="mode">Mode: </p>
+	<p id="vari">Variance: </p>
+	<p id="std">Standard Deviation: </p></td></tr>
+	
+</table>
+
+<br>
+
+	<table style="width:0px;" align="center">
+	<tr><td>
+		<a href="../assign3/tests.html">Unit Testing Results</a>
+	</td>
+	</tr>
+</table>
+
+<br>
+
+	<table id="back" style="width:0px;" align="center">
+	<tr><td>
+		<a href="../index.html">Back to ePortfolio</a>
+	</td>
+	</tr>
+	</table>
+
+</body>
+</html>

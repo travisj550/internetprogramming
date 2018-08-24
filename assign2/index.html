@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../style.css">
+	<title>Payment Calculator</title>
+	<script type="text/javascript">
+		function resetForm() {
+	
+		    document.getElementById("mainForm").reset();
+		}
+
+		function validateForm() {
+	
+			var p = document.forms["mainForm"]["principle"].value;
+			var r = document.forms["mainForm"]["rate"].value;
+			var t = document.forms["mainForm"]["time"].value;
+	
+			var s = document.forms["mainForm"]["goal"].value;
+	
+			document.getElementById("test").innerHTML = s;
+	
+			if(p < 0 || p == 0) {
+				document.getElementById("amount").innerHTML = "Please enter an amount larger than 0 with up to 2 decimal places:";
+				document.mainForm.principle.focus();
+				return false;
+			}
+			if(r < 0 || r == 0) {
+				document.getElementById("interest").innerHTML = "Please enter an annual interest rate larger than 0 with up to 2 decimal places:"
+				document.mainForm.rate.focus();
+				return false;
+			}
+			if(t < 0 || t == 0) {
+				document.getElementById("date").innerHTML = "Please enter a number of months larger than 0 with up to 2 decimal places:";
+				document.mainForm.time.focus();
+				return false;
+			}
+			switch(s) {
+				case "savings":
+					saveFunction();
+					break;
+				case "debt":
+					debtFunction();
+					break;
+			}
+			return true;
+		}
+
+		function saveFunction() {
+	
+			var a = document.forms["mainForm"]["principle"].value;
+			var r = document.forms["mainForm"]["rate"].value;
+			var t = document.forms["mainForm"]["time"].value;
+			var comp = document.forms["mainForm"]["compounding"].value;
+			var n = 0;
+	
+			if(comp == 1)
+				n=1;
+			if(comp == 12)
+				n=12;
+			if(comp == 365)
+				n=365;
+	
+			r /= 100;
+			t /= 12;
+	
+			var p = a / ((1 + r/n) ** (n*t));
+	
+			p = p / (t*12);
+			var out = p.toFixed(2);
+	
+			document.getElementById("test").innerHTML = out;
+	
+	
+			return true;
+		}
+
+		function debtFunction() {
+	
+			var p = document.forms["mainForm"]["principle"].value;
+			var r = document.forms["mainForm"]["rate"].value;
+			var t = document.forms["mainForm"]["time"].value;
+	
+			r /= 100;
+			t /= 12;
+	
+			var a = (r * p) / (1 - (1+r) ** (-t));
+	
+			a /= 12;
+			var out = a.toFixed(2);
+		
+			document.getElementById("first").innerHTML = "Your monthly savings or payment will need to be:";
+	
+			document.getElementById("test").innerHTML = out;
+	
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<table align="center">
+		<tr><td>
+			<h1>Payment Calculator</h1>
+		</td></tr>
+		<tr><td><p>Determine the monthly amount necessary to pay off a loan or save a certain amount of money, given an interest rate and number of months.</p></td></tr>
+		<tr><td><form id="mainForm" name="mainForm" method="post">
+		<h3>What are you trying to do? Answer the following questions:</h3>
+		
+		<input type="radio" name="goal" value="debt" checked> Pay off debt<br>
+		
+		<input type="radio" name="goal" value="savings"> Save for a major purchase<br>
+		
+		<p id="amount">Amount (currency):</p>
+		<input type="number" step="0.01" name="principle" value=0 required><p class="warning" id="valid_p"></p>
+		<p id="interest">Interest rate (annual percent):</p>
+		<input type="number" step="0.01" name="rate" value=0 required><p class="warning" id="valid_r"></p>
+		<!--Use a calendar system or just the number of months?-->
+		<p id="date">Time (months):</p>
+		<input type="number" step="0.01" name="time" value=0 required><p class="warning" id="valid_t"></p>
+		<p>(For savings) How often is interest compounded?</p>
+		<select name="compounding">
+			<option value=365>Daily</option>
+			<option value=12 selected>Monthly</option>
+			<option value=1>Yearly</option>
+		</select><br>
+		
+		<p>(Optional) What are your favorite nicknames/slogans for "University of Florida"?</p>
+		<input type="checkbox" name="option1" value="UF">"UF"<br>
+		<input type="checkbox" name="option2" value="Univ">"University of Florida"<br>
+		<input type="checkbox" name="option3" value="Fl">"Florida"<br>
+		<input type="checkbox" name="option4" value="Gators">"The Gators"<br>
+		<input type="checkbox" name="option5" value="Nation">"The Gator Nation"<br>
+		<input type="checkbox" name="option6" value="Good">"The Gator Good"<br><br>
+		
+		<input type="button" onclick="validateForm()" value="Submit">
+
+		<input type="button" onclick="resetForm()" value="Reset form"><br>
+	</form></td></tr>
+	
+	<tr><td><h3 id="first">Your monthly savings or payment will need to be:</h3></td></tr>
+	<tr><td><h2 id="test"></h2></td></tr>
+</table>
+	<br>
+	<table style="width:0px;" align="center">
+	<tr><td>
+		<a href="../index.html">Back to ePortfolio</a>
+	</td></tr>
+	</table>
+	
+</body>
+</html>

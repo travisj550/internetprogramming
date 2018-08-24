@@ -1,0 +1,89 @@
+a:hover {
+	color: green;
+}
+
+p {
+	font-family:courier;	
+	color:black;
+}
+
+h1 {
+	font-family:courier;
+}
+
+h2 {
+	font-family:courier;
+}
+
+h3 {
+	font-family:courier;
+}
+
+body {
+	margin:15px;
+	background:url("circuits.png");
+	background-attachment: fixed;
+}
+
+hr {
+	color:black;
+}
+
+ul {
+	list-style-image:url("BlackDisc.svg");
+	list-style-position:outside;
+	font-family:courier;
+}
+
+table {
+	background-color:LightGray;
+	padding:10px;
+	font-family:courier;
+	width:100%;
+	max-width:900px;
+}
+
+table.fadeIn {
+	display:none;
+}
+
+textarea.fadeIn{
+	display:none;
+}
+
+table.a {
+	background-color:LightGray;
+	padding:10px;
+	font-family:courier;
+	width:100%;
+	max-width:880px;
+	border:3px solid black;
+	border-collapse:collapse;
+}
+
+th.a {
+	border:3px solid black;
+	border-collapse:collapse;
+}
+
+tr.a {
+	border:3px solid black;
+	border-collapse:collapse;
+}
+
+tr.a:hover {
+	background-color:#ffb347;
+}
+
+td.a {
+	border:3px solid black;
+	border-collapse:collapse;
+}
+
+input.a {
+	width: 100%; 
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+
+}
